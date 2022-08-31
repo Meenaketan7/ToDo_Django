@@ -1,7 +1,13 @@
-
-    <h1>My to do list</h1>
-    <a href="{%url 'task-create'%}">add task</a>
-    <table>
+{%if request.user.is_authenticated%}
+    <p>{{request.user}}</p>
+    <a href="">Log Out</a>
+{% else %}
+    <a href="">Log In</a>
+{% endif %}
+<hr>
+<h1>My to do list</h1>
+<a href="{%url 'task-create'%}">add task</a>
+<table>
         <th>Items</th>
         {% for task in tasks %}
             <tr>
@@ -13,4 +19,4 @@
             {%empty%}
                 <h3>No Items in list</h3>
         {% endfor %}
-    </table>
+</table>
