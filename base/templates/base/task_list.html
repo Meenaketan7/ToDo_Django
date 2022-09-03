@@ -20,10 +20,10 @@
 
 <div id="search-add-wrapper">
     <form action="" method="GET" style="margin-top: 20px;display: flex;">
-        <input type="text" name='search-area' value="{{ search_input }}" />
-        <input type="submit" value="search">
+        <input type="text"style="width: 50%;" name='search-area' value="{{ search_input }}" />
+        <input class="button" type="submit" value="search">
+        <a id="add-link" href="{%url 'task-create'%}">&#x2b</a>
     </form>
-    <a id="add-link" href="{%url 'task-create'%}">&#x2b</a>
 </div>
 
 

@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
     <style>
+
+
         body{
             background-color: #fafafa;
             font-family: 'Inconsolata', monospace;
@@ -102,7 +104,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 10px;
     }
 
     #add-link {
@@ -110,7 +112,78 @@
         text-decoration: none;
         font-size: 42px;
         text-shadow: 1px 1px #81413b;
+        
     }
+    input {
+        outline: none;
+        border: none;
+    }
+    input[type=text],
+    input[type=password],textarea {
+            border: 1px solid #757575;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        ::placeholder {
+            font-weight: 300;
+            opacity: 0.5;
+        }
+
+        .button {
+            border: 1px solid #757575;
+            background-color: #FFF;
+            color: #EB796F;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        @media screen and (max-width:320px) {
+            #search-add-wrapper {
+                padding: 10px;
+            }
+
+        }
+        .handle {
+            display: inline-block;
+            padding: 20px 16px;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .handle:after,
+        .handle:before {
+            display: block;
+            content: "";
+        }
+
+        .handle:active,
+        .handle:active:before,
+        .handle:active:after {
+            cursor: grabbing;
+        }
+
+        .dropArea {
+            background-color: #f1f2f6;
+            color: black;
+            border: #ced6e0 1px solid;
+        }
+
+        .selectedTask {
+            opacity: 0.6;
+        }
+
     </style>
 </head>
 <body>
